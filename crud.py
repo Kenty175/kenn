@@ -4,6 +4,7 @@ def create_tables():
     connection = connect_to_mysql()
     if connection is None:
         print("Failed to connect to database. Please make sure MySQL is running.")
+        print("If you haven't set up the database yet, please run the setup script first.")
         return
 
     cursor = connection.cursor()
